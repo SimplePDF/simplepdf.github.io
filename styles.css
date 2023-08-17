@@ -1,4 +1,5 @@
 body {
+  position: relative;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   padding: 20px;
@@ -15,14 +16,26 @@ h4 {
   text-align: center;
 }
 
+.github-star-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .title-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 .title-container > iframe {
   margin-left: 40px;
+}
+
+.subtitle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -33,6 +46,16 @@ h4 {
 }
 
 .content > a {
-  color: inherit;
   padding: 12px 0;
+}
+
+.content > a,
+.links-group > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.content > a:hover,
+.links-group > a:hover {
+  text-decoration: underline;
 }
