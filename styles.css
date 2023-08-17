@@ -9,11 +9,26 @@ h1 {
   font-size: 32px;
 }
 
+i {
+  font-style: normal;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
 h1,
 h4 {
   font-weight: 500;
   line-height: 1.4;
   text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .github-star-container {
@@ -45,17 +60,36 @@ h4 {
   padding-bottom: 60px;
 }
 
+.offerings {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.offerings p {
+  margin: 0;
+}
+
+.rto-link {
+  font-size: 12px;
+  color: #737373;
+}
+
+.or {
+  padding: 20px 0;
+}
+
 .content > a {
   padding: 12px 0;
 }
 
-.content > a,
-.links-group > a {
-  color: inherit;
-  text-decoration: none;
+.links-group {
+  font-size: 14px;
 }
 
-.content > a:hover,
-.links-group > a:hover {
-  text-decoration: underline;
+.bullet-points {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+
+  font-size: 14px;
 }
