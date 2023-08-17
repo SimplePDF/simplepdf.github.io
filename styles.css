@@ -5,6 +5,10 @@ body {
   padding: 20px;
 }
 
+b {
+  color: inherit;
+}
+
 h1 {
   font-size: 32px;
 }
