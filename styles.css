@@ -23,7 +23,7 @@ b {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 38px;
 }
 
 i {
@@ -42,6 +42,12 @@ h4 {
 
 h2 {
   margin-bottom: 0;
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 28px;
 }
 
 h4 {
@@ -85,11 +91,10 @@ a:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 60px;
 }
 
 .cta {
-  padding: 40px 0;
+  padding: 20px 0 20px 0;
   font-size: 32px;
 }
 
@@ -102,24 +107,20 @@ a:hover {
   margin: 0;
 }
 
-.or {
-  padding: 20px 0;
-}
-
-.content > a {
-  padding: 12px 0;
-}
-
-.links-group {
-  font-size: 14px;
-}
-
 .bullet-points {
-  text-align: left;
+  margin: 0;
   display: flex;
   justify-content: center;
-
   font-size: 14px;
+}
+
+.bullet-points li {
+  padding: 4px 8px;
+  list-style: none;
+}
+
+.bullet-points li a {
+  color: #7e7e7e;
 }
 
 .create-account {
@@ -132,10 +133,19 @@ a:hover {
   font-size: 14px;
 }
 
-.embed-wrapper {
-  transform: scale(0.7);
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  transform: scale(0.8);
   transform-origin: 50% 0;
-  box-shadow: 1px 1px solid red;
+}
+
+.iframe {
+  width: 100%;
+  border: none;
+  height: 900px;
+  border: 1px solid #aeaeae;
+  border-radius: 6px;
 }
 
 .interactive-demo-title {
@@ -146,4 +156,12 @@ a:hover {
 
 .interactive-demo-title button {
   margin-left: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .iframe-wrapper {
+    display: flex;
+    justify-content: center;
+    transform: scale(1);
+  }
 }

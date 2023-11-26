@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" type="image/png" href="favicon-32x32.png" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Embed a JS PDF editor, filler & annotator in your website</title>
@@ -71,48 +71,35 @@
       <h1>SimplePDF Embed</h1>
     </div>
     <div class="subtitle-container">
-      <h2>Embed a PDF editor & annotator in your website</h2>
+      <h2>Embed a PDF editor with a <u>single</u> line of code</h2>
     </div>
-    <div class="content">
-      <div class="offerings">
-        <p class="cta">
-          <a href="https://simplepdf.eu/embed#ghio" class="create-account"><b>Get started</b></a>
-        </p>
-        <h4>How it works</h4>
-        <div class="bullet-points">
-          <ul>
-            <li><a href="https://simplePDF.eu/embed#ghio" target="_blank">Add SimplePDF to your website</a></li>
-            <li><a href="https://simplepdf.eu/portal#ghio" target="_blank">Turn PDFs to web forms in minutes</a></li>
-            <li>
-              <a href="https://simplepdf.eu/help/how-to/configure-webhooks-pdf-form-submissions#ghio" target="_blank"
-                >Configure your own S3 bucket</a
-              >
-            </li>
-            <li>
-              <a href="https://simplepdf.eu/help/how-to/configure-webhooks-pdf-form-submissions#ghio"
-                >Get notified via webhooks</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="links-group">
-        <a href="mailto:hello@simplepdf.eu" target="_blank">hello@simplepdf.eu</a>
-      </div>
+    <div class="offerings">
+      <p class="cta">
+        <a href="https://simplepdf.eu/embed#ghio" class="create-account"><b>Add to your website</b></a>
+      </p>
+      <ul class="bullet-points">
+        <li><a href="https://simplepdf.eu/portal#ghio" target="_blank">PDFs to web forms in minutes</a></li>
+        <li>
+          <a href="https://simplepdf.eu/help/how-to/use-your-own-s3-bucket-storage-for-pdf-form-submissions#ghio" target="_blank"
+            >Use your own storage</a
+          >
+        </li>
+        <li>
+          <a href="https://simplepdf.eu/help/how-to/configure-webhooks-pdf-form-submissions#ghio"
+            >Get notified via webhooks</a
+          >
+        </li>
+      </ul>
     </div>
-
-    <h2 class="interactive-demo-title">Interactive demo<button id="button" onclick="sendMessage()">Try with a fillable form</button></h2>
+    <h3 class="interactive-demo-title">Interactive demo<button id="button" onclick="sendMessage()">Try with a fillable form</button></h3>
     <p class="google-sheet-disclaimer">The submitted document can be seen in this <a href="https://docs.google.com/spreadsheets/d/1l0SDhY5MaQvA8WbrehCSqsRWL1PPbiYFwSF7zTUiDxM/edit#gid=0">Google sheet</a></p>
-    <div class="embed-wrapper">
+
+    <div class="iframe-wrapper">
       <iframe
+      class="iframe"
       id="simplepdf"
       src="https://yourcompany.simplePDF.eu/editor?open=https://cdn.simplepdf.eu/simple-pdf/assets/sample.pdf"
-      frameborder="0"
-      width="100%"
-      height="900px"
-      style="border: 1px solid #aeaeae; border-radius: 6px"
     ></iframe>
-    </div>
-
+  </div>
   </body>
 </html>
