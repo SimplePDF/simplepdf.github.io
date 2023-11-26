@@ -20,6 +20,41 @@
     <meta content="Enable your website visitors to fill, annotate, merge and edit PDF files without leaving your website. Use the iframe, Javascript script or React component." property="twitter:description" />
     <meta content="https://cdn.simplepdf.eu/simple-pdf/assets/js-pdf-editor-fill-edit-merge-pdf-online.png" property="twitter:image" />
     <meta content="@simple_pdf" property="twitter:creator" />
+    <script>
+      const logStyles = [
+        "color: #fff",
+        "background-color: #444",
+        "padding: 2px 4px",
+        "border-radius: 2px"
+      ].join(";");
+    </script>
+    <script>
+      async function sendMessage() {
+        // Head over here for the Iframe documentation:
+        // https://github.com/SimplePDF/simplepdf-embed/blob/main/documentation/IFRAME.md
+        const editor = document.getElementById("simplepdf");
+        const button = document.getElementById("button");
+
+        const response = await fetch("./pdf_form_example.pdf");
+        const blob = await response.blob();
+        const reader = new FileReader();
+        await new Promise((resolve, reject) => {
+          reader.onload = resolve;
+          reader.onerror = reject;
+          reader.readAsDataURL(blob);
+        });
+
+        editor.contentWindow.postMessage(
+          JSON.stringify({
+            type: "LOAD_DOCUMENT",
+            data: { data_url: reader.result },
+          }),
+          "*"
+        );
+
+        button.style.display = 'none';
+      }
+    </script>
   </head>
   <body>
     <div class="github-star-container">
@@ -66,12 +101,18 @@
       </div>
     </div>
 
-    <iframe
-      src="https://embed.simplePDF.eu/editor?open=https://cdn.simplepdf.eu/simple-pdf/assets/sample.pdf"
+    <h2 class="interactive-demo-title">Interactive demo<button id="button" onclick="sendMessage()">Try with a fillable form</button></h2>
+    <p class="google-sheet-disclaimer">The submitted document can be seen in this <a href="https://docs.google.com/spreadsheets/d/1l0SDhY5MaQvA8WbrehCSqsRWL1PPbiYFwSF7zTUiDxM/edit#gid=0">Google sheet</a></p>
+    <div class="embed-wrapper">
+      <iframe
+      id="simplepdf"
+      src="https://yourcompany.simplePDF.eu/editor?open=https://cdn.simplepdf.eu/simple-pdf/assets/sample.pdf"
       frameborder="0"
       width="100%"
-      height="720px"
-      style="border: 1px solid #efefef"
+      height="900px"
+      style="border: 1px solid #aeaeae; border-radius: 6px"
     ></iframe>
+    </div>
+
   </body>
 </html>

@@ -5,6 +5,19 @@ body {
   padding: 20px;
 }
 
+button {
+  cursor: pointer;
+  padding: 4px 8px;
+  background: none;
+  border: 1px solid #cacaca;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+button:hover {
+  border-color: black;
+}
+
 b {
   color: inherit;
 }
@@ -110,4 +123,27 @@ a:hover {
 }
 
 .create-account {
+}
+
+.google-sheet-disclaimer {
+  text-align: center;
+  font-style: italic;
+  color: #6a6a6a;
+  font-size: 14px;
+}
+
+.embed-wrapper {
+  transform: scale(0.7);
+  transform-origin: 50% 0;
+  box-shadow: 1px 1px solid red;
+}
+
+.interactive-demo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-demo-title button {
+  margin-left: 12px;
 }
