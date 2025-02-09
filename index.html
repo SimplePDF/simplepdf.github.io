@@ -47,7 +47,7 @@
         editor.contentWindow.postMessage(
           JSON.stringify({
             type: "LOAD_DOCUMENT",
-            data: { data_url: reader.result },
+            data: { data_url: reader.result, name: 'fw8ben.pdf' },
           }),
           "*"
         );
